@@ -1,0 +1,552 @@
+openapi: 3.0.3
+info:
+  title: Laravel
+  description: ''
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost'
+paths:
+  /api/user:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+  /api/products:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  products:
+                    -
+                      id: 1
+                      title: 'SEVENTEEN Lightstick Ver 2'
+                      description: 'SEVENTEEN Carat Bong Ver 2 Lightstick'
+                      currency: PHP
+                      price: 1549
+                      brand: Seventeen
+                      category: Lighstick
+                      image: 'https://my-test-11.slatic.net/p/4fa67e774e23122eaf6b3d986e2b31d6.jpg'
+                      created_at: null
+                      updated_at: null
+                    -
+                      id: 2
+                      title: 'TXT The Dream Chapter Eternity Album'
+                      description: 'There are six tracks in the album including the opening track Drama and title track Cant You See Me?'
+                      currency: PHP
+                      price: 830
+                      brand: 'Tomorrow By Together'
+                      category: Album
+                      image: 'https://kpopmart.com/20286-large_default/txt-the-dream-chapter-eternity-random.jpg'
+                      created_at: null
+                      updated_at: null
+                    -
+                      id: 3
+                      title: 'BLACKPINK How you like that Photocards'
+                      description: 'BLACKPINK How you like that Album Photocards'
+                      currency: PHP
+                      price: 1500
+                      brand: Blackpink
+                      category: Photocards
+                      image: 'https://thekfandomstore.com/wp-content/uploads/2021/09/photo-collage-23.png'
+                      created_at: null
+                      updated_at: null
+                    -
+                      id: 6
+                      title: 'BLACKPINK How you like that Photocards'
+                      description: 'BLACKPINK How you like that Album Photocards'
+                      currency: PHP
+                      price: 1500
+                      brand: Blackpink
+                      category: photocards
+                      image: 'https://thekfandomstore.com/wp-content/uploads/2021/09/photo-collage-23.png'
+                      created_at: null
+                      updated_at: null
+                    -
+                      id: 7
+                      title: 'BLACKPINK Born Pink ALbum'
+                      description: 'BLACKPINK Born Pink ALbum'
+                      currency: PHP
+                      price: 1299
+                      brand: Blackpink
+                      category: album
+                      image: 'https://cdn-contents.weverseshop.io/public/shop/04157e5fb9472c1ad868e9fb2c7b8b01.png'
+                      created_at: '2022-10-08T03:02:55.000000Z'
+                      updated_at: '2022-10-08T03:15:23.000000Z'
+                  '0': 200
+                properties:
+                  products:
+                    type: array
+                    example:
+                      -
+                        id: 1
+                        title: 'SEVENTEEN Lightstick Ver 2'
+                        description: 'SEVENTEEN Carat Bong Ver 2 Lightstick'
+                        currency: PHP
+                        price: 1549
+                        brand: Seventeen
+                        category: Lighstick
+                        image: 'https://my-test-11.slatic.net/p/4fa67e774e23122eaf6b3d986e2b31d6.jpg'
+                        created_at: null
+                        updated_at: null
+                      -
+                        id: 2
+                        title: 'TXT The Dream Chapter Eternity Album'
+                        description: 'There are six tracks in the album including the opening track Drama and title track Cant You See Me?'
+                        currency: PHP
+                        price: 830
+                        brand: 'Tomorrow By Together'
+                        category: Album
+                        image: 'https://kpopmart.com/20286-large_default/txt-the-dream-chapter-eternity-random.jpg'
+                        created_at: null
+                        updated_at: null
+                      -
+                        id: 3
+                        title: 'BLACKPINK How you like that Photocards'
+                        description: 'BLACKPINK How you like that Album Photocards'
+                        currency: PHP
+                        price: 1500
+                        brand: Blackpink
+                        category: Photocards
+                        image: 'https://thekfandomstore.com/wp-content/uploads/2021/09/photo-collage-23.png'
+                        created_at: null
+                        updated_at: null
+                      -
+                        id: 6
+                        title: 'BLACKPINK How you like that Photocards'
+                        description: 'BLACKPINK How you like that Album Photocards'
+                        currency: PHP
+                        price: 1500
+                        brand: Blackpink
+                        category: photocards
+                        image: 'https://thekfandomstore.com/wp-content/uploads/2021/09/photo-collage-23.png'
+                        created_at: null
+                        updated_at: null
+                      -
+                        id: 7
+                        title: 'BLACKPINK Born Pink ALbum'
+                        description: 'BLACKPINK Born Pink ALbum'
+                        currency: PHP
+                        price: 1299
+                        brand: Blackpink
+                        category: album
+                        image: 'https://cdn-contents.weverseshop.io/public/shop/04157e5fb9472c1ad868e9fb2c7b8b01.png'
+                        created_at: '2022-10-08T03:02:55.000000Z'
+                        updated_at: '2022-10-08T03:15:23.000000Z'
+                    items:
+                      type: object
+                  0:
+                    type: integer
+                    example: 200
+      tags:
+        - Endpoints
+      security: []
+  '/api/products/{product_id}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  products:
+                    id: 1
+                    title: 'SEVENTEEN Lightstick Ver 2'
+                    description: 'SEVENTEEN Carat Bong Ver 2 Lightstick'
+                    currency: PHP
+                    price: 1549
+                    brand: Seventeen
+                    category: Lighstick
+                    image: 'https://my-test-11.slatic.net/p/4fa67e774e23122eaf6b3d986e2b31d6.jpg'
+                    created_at: null
+                    updated_at: null
+                  '0': 200
+                properties:
+                  products:
+                    type: object
+                    example:
+                      id: 1
+                      title: 'SEVENTEEN Lightstick Ver 2'
+                      description: 'SEVENTEEN Carat Bong Ver 2 Lightstick'
+                      currency: PHP
+                      price: 1549
+                      brand: Seventeen
+                      category: Lighstick
+                      image: 'https://my-test-11.slatic.net/p/4fa67e774e23122eaf6b3d986e2b31d6.jpg'
+                      created_at: null
+                      updated_at: null
+                  0:
+                    type: integer
+                    example: 200
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: aut
+                description:
+                  type: string
+                  description: ''
+                  example: illo
+                currency:
+                  type: string
+                  description: ''
+                  example: adipisci
+                price:
+                  type: string
+                  description: ''
+                  example: ut
+                brand:
+                  type: string
+                  description: ''
+                  example: distinctio
+                category:
+                  type: string
+                  description: ''
+                  example: rem
+                image:
+                  type: string
+                  description: ''
+                  example: odit
+              required:
+                - title
+                - description
+                - currency
+                - price
+                - brand
+                - category
+                - image
+      security: []
+    delete:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: product_id
+        description: 'The ID of the product.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/products/search/{keywords}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  products: []
+                properties:
+                  products:
+                    type: array
+                    example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: keywords
+        description: ''
+        example: itaque
+        required: true
+        schema:
+          type: string
+  /api/products/category/categories:
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  categories:
+                    - Lighstick
+                    - Album
+                    - Photocards
+                    - photocards
+                    - album
+                properties:
+                  categories:
+                    type: array
+                    example:
+                      - Lighstick
+                      - Album
+                      - Photocards
+                      - photocards
+                      - album
+                    items:
+                      type: string
+      tags:
+        - Endpoints
+      security: []
+  '/api/products/category/{category_name}':
+    get:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses:
+        200:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                example: []
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: category_name
+        description: ''
+        example: perferendis
+        required: true
+        schema:
+          type: string
+  /api/products/add:
+    post:
+      summary: ''
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: ''
+                  example: necessitatibus
+                description:
+                  type: string
+                  description: ''
+                  example: dolores
+                currency:
+                  type: string
+                  description: ''
+                  example: ab
+                price:
+                  type: string
+                  description: ''
+                  example: nihil
+                brand:
+                  type: string
+                  description: ''
+                  example: ex
+                category:
+                  type: string
+                  description: ''
+                  example: ex
+                image:
+                  type: string
+                  description: ''
+                  example: sed
+              required:
+                - title
+                - description
+                - currency
+                - price
+                - brand
+                - category
+                - image
+      security: []
+tags:
+  -
+    name: Endpoints
+    description: ''
